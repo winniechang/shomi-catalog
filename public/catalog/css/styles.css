@@ -1,0 +1,26 @@
+#catalog .row > div:nth-of-type(4n+1){
+  clear:both;
+}
+
+#catalog .card {
+  padding: 10px;
+  font-size: 15px;
+  border: 1px solid white;
+  height: 20%;
+}
+
+#catalog .card:hover {
+  background-color: #7a43b6;
+}
+
+#catalog img {
+  max-width: 20%;
+  max-height: 20%;
+}
+
+body {
+  background-color: #2a0251;
+  color: white;
+  font-family: "futura-pt", sans-serif;
+  font-size: 20px;
+}

@@ -2,11 +2,16 @@
 <html xmlns:ng="http://angularjs.org">
 <head>
   <title>Shomi Catalog</title>
+  <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="catalog/css/styles.css"/>
 </head>
 <body>
 
 <section ng-include="'catalog/views/catalog.client.view.html'"></section>
 
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="lib/angular/angular.js"></script>
 <script type="text/javascript" src="catalog/catalog.client.module.js"></script>
 <script type="text/javascript" src="catalog/services/catalog.client.service.js"></script>

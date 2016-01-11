@@ -1,11 +1,17 @@
-<section ng-controller="CatalogController">
-  <ul ng-repeat="model in data.Data">
-    <!-- TODO: move template into its own view -->
-    <li>
-      <img src="{{model.Item.Images|posterImage}}" /><br>
-      Title: {{model.Item.Title}} <br>
-      Release Year: {{model.Item.ReleaseYear}} <br>
-      Duration: {{model.Item.RunTimeSec}} seconds<br>
-    </li>
-  </ul>
+<section id="catalog" ng-controller="CatalogController">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <div class="row">
+        <div class="col-md-3 card" ng-repeat="model in data.Data">
+          <!-- TODO: move template into its own view -->
+          <img src="{{model.Item.Images|posterImage}}"/><br>
+          Title: {{model.Item.Title}} <br>
+          Release Year: {{model.Item.ReleaseYear}} <br>
+          Duration: {{model.Item.RunTimeSec}} seconds<br>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
 </section>
