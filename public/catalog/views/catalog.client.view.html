@@ -8,7 +8,7 @@
           <img src="{{model.Item.Images|posterImage}}"/><br>
           Title: {{model.Item.Title}} <br>
           Release Year: {{model.Item.ReleaseYear}} <br>
-          Duration: {{model.Item.RunTimeSec}} seconds<br>
+          Duration: {{model.Item.RunTimeSec|formatDuration}}<br>
         </div>
       </div>
     </div>

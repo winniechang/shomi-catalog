@@ -2,7 +2,7 @@ angular.module('catalog').controller('CatalogController', ['$scope', '$http',
   function ($scope, $http) {
     $scope.name = 'Shomi Catalog';
     $scope.data = null;
-    $scope.sortBy = 'year';
+    $scope.sortBy = 'title';
 
     // Simple GET request example:
     $http({
