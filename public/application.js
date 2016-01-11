@@ -2,7 +2,7 @@
 
 var mainApplicationModuleName = 'shomi-catalog';
 
-var mainApplicationModule = angular.module(mainApplicationModuleName, []);
+var mainApplicationModule = angular.module(mainApplicationModuleName, ['catalog']);
 
 angular.element(document).ready(function () {
   angular.bootstrap(document, [mainApplicationModuleName]);
