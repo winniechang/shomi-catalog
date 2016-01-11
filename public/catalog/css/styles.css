@@ -26,7 +26,13 @@ body {
 }
 
 #sort-selector {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
+}
+
+#pagination-controls {
+  position: fixed;
+  left: 0;
+  bottom: 0;
 }

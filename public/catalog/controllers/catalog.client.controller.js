@@ -3,6 +3,11 @@ angular.module('catalog').controller('CatalogController', ['$scope', '$http',
     $scope.name = 'Shomi Catalog';
     $scope.data = null;
     $scope.sortBy = 'title';
+    $scope.paginationObject = {
+      currentIndex: 0,
+      totalObjects: 0,
+      totalPages: 2
+    };
 
     // Simple GET request example:
     $http({
