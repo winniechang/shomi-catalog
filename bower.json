@@ -1,0 +1,7 @@
+{
+  "name": "Shomi Catalog",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "~1.5"
+  }
+}
