@@ -1,4 +1,11 @@
 <section ng-controller="CatalogController">
-  <input type=text id=text1 ng-model=name>
-  <input type=text id=text2 ng-model=name>
+  <ul ng-repeat="model in data.Data">
+    <!-- TODO: move template into its own view -->
+    <li>
+      <img src="{{model.Item.Images|posterImage}}" /><br>
+      Title: {{model.Item.Title}} <br>
+      Release Year: {{model.Item.ReleaseYear}} <br>
+      Duration: {{model.Item.RunTimeSec}} seconds<br>
+    </li>
+  </ul>
 </section>
