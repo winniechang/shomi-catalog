@@ -3,7 +3,7 @@
     <div class="col-md-1"></div>
     <div class="col-md-10">
       <div class="row">
-        <div class="col-md-3 card" ng-repeat="model in data.Data">
+        <div class="col-md-3 card" ng-repeat="model in data.Data | orderBy:sortingFunction">
           <!-- TODO: move template into its own view -->
           <img src="{{model.Item.Images|posterImage}}"/><br>
           Title: {{model.Item.Title}} <br>
@@ -13,5 +13,17 @@
       </div>
     </div>
     <div class="col-md-1"></div>
+  </div>
+  <div class="dropdown" id="sort-selector">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+      Sort by
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+      <li><a href="#" ng-click="sortByTitle()">Title</a></li>
+      <li><a href="#" ng-click="sortByDuration()">Duration</a></li>
+      <li><a href="#" ng-click="sortByYear()">Release Year</a></li>
+    </ul>
+    Sorting by: {{sortBy}}
   </div>
 </section>
