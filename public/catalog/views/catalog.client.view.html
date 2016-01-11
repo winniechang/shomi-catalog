@@ -3,7 +3,7 @@
     <div class="col-md-1"></div>
     <div class="col-md-10">
       <div class="row">
-        <div class="col-md-3 card" ng-repeat="model in data.Data | orderBy:sortingFunction">
+        <div class="col-md-3 card" ng-repeat="model in data.Data | orderBy:sortingFunction | limitTo:20:paginationObject.currentIndex*20">
           <!-- TODO: move template into its own view -->
           <img src="{{model.Item.Images|posterImage}}"/><br>
           Title: {{model.Item.Title}} <br>
@@ -26,5 +26,15 @@
     </ul>
     Sorting by: {{sortBy}}
   </div>
-  <div ng-paginate ng-model="paginationObject"></div>
+  <div>
+    <nav>
+      <ul id="pagination-controls" class="pagination">
+        <li><a href="#" aria-label="Previous" ng-click="previousPage()"><span aria-hidden="true">&laquo;</span></a></li>
+        <li ng-repeat="n in range(1,paginationObject.totalPages)"><a href="#" ng-click="gotoPage(n)">{{n}}</a></li>
+        <li><a href="#" aria-label="Next" ng-click="nextPage()"><span aria-hidden="true">&raquo;</span></a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- TODO: fix directive -->
+  <!-- div ng-paginate ng-model="paginationObject"></div-->
 </section>
